@@ -16,6 +16,7 @@ server.use((req, res, next) => {
 
 
 
+
 const bodyParser = require('body-parser');
 server.use(bodyParser.json());
 
@@ -27,6 +28,8 @@ client.connect();
 
 const apiRouter = require('./api');
 server.use('/api', apiRouter);
+
+
 
 server.listen(PORT, () => {
   console.log('The server is up on port', PORT)
